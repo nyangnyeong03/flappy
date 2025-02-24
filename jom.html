@@ -153,12 +153,12 @@
                 var height = Math.floor(Math.random() * (maxHeight - minHeight + 1) + minHeight);
                 var gap = 80;
 
-                // Top pipe
-                myObstacles.push(new component(50, height, "toppipe.png", x, 0, "image"));
+               // Top pipe as a thin line
+            myObstacles.push(new component(5, height, "black", x, 0, "line"));
 
-                // Bottom pipe (flipped)
-                myObstacles.push(new component(50, myGameArea.canvas.height - (height + gap), "bottompipe.png", x, height + gap, "image"));
-            }
+            // Bottom pipe as a thin line
+            myObstacles.push(new component(5, myGameArea.canvas.height - (height + gap), "black", x, height + gap, "line"));
+
             for (var i = 0; i < myObstacles.length; i++) {
                 myObstacles[i].x -= 2;
                 myObstacles[i].update();
